@@ -1,3 +1,10 @@
-const text = "Hola";
+import { addField } from "./functions/pdf_functions";
 
-console.log(text);
+const init = async () => {
+    await addField();
+};
+
+init().catch((error) => {
+    console.error(error);
+    process.exit(1);
+});
